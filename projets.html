@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projets — TOTO Yao Wonder Japhet</title>
+<meta name="description" content="Stack SOC sur Proxmox, VPN IPSec site-à-site, proxy Squid transparent, purple team lab, analyse mémoire Volatility.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%231C2B2A'/><text x='16' y='21' font-family='monospace' font-size='13' font-weight='700' fill='%23F0F2ED' text-anchor='middle'>TY</text></svg>">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Projets — TOTO Yao Wonder Japhet">
+<meta property="og:description" content="Stack SOC sur Proxmox, VPN IPSec site-à-site, proxy Squid transparent, purple team lab, analyse mémoire Volatility.">
+<meta property="og:locale" content="fr_FR">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="progress" aria-hidden="true"></div>
+
+<div class="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"></span></div>
+
+<a class="float-avatar" data-cursor="Accueil" href="index.html" aria-label="Revenir à l'accueil">
+  <img src="assets/img/photo.png" alt="TOTO Yao Wonder Japhet" width="140" height="140">
+  <span class="float-avatar__tip" aria-hidden="true">Japhet</span>
+</a>
+<a class="skip" href="#main">Aller au contenu</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <nav class="nav" aria-label="Navigation principale">
+      <a class="brand" href="index.html">
+        <span class="brand__mark" aria-hidden="true">TY</span>
+        <span>TOTO Yao Wonder Japhet<span class="brand__sub">Réseaux &amp; Cybersécurité</span></span>
+      </a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu"><span></span></button>
+      <ul class="nav__links" id="menu">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="competences.html">Compétences</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="experience.html">Expérience</a></li>
+        <li><a href="contact.html">Me contacter</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="section-head reveal" style="max-width:74ch">
+        <p class="eyebrow">Projets</p>
+        <h1 style="margin:1rem 0 1.1rem; font-size:clamp(2.1rem,4.4vw,3.3rem)">Douze projets. Tous ont vraiment tourné.</h1>
+        <p class="lead">Certains viennent des cours, d'autres de mon homelab. Filtre par domaine si tu cherches quelque chose de précis.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <div class="filters reveal" role="group" aria-label="Filtrer les projets">
+        <button class="filter is-active" data-filter="tous" data-cursor="Filtrer">Tous</button>
+        <button class="filter" data-filter="reseau" data-cursor="Filtrer">Réseau</button>
+        <button class="filter" data-filter="soc" data-cursor="Filtrer">SOC / Blue Team</button>
+        <button class="filter" data-filter="offensif" data-cursor="Filtrer">Offensif</button>
+        <button class="filter" data-filter="forensics" data-cursor="Filtrer">Forensique</button>
+        <button class="filter" data-filter="systemes" data-cursor="Filtrer">Systèmes</button>
+      </div>
+      <p class="mono reveal" style="font-size:.76rem; color:var(--muted); letter-spacing:.1em; margin-bottom:26px"><span id="project-count">12</span> PROJETS AFFICHÉS · CLIQUE SUR « EN SAVOIR PLUS » POUR LE DÉTAIL</p>
+
+      <div class="grid grid--2">
+
+        <article class="project reveal" data-cat="soc" id="soc">
+          <span class="project__tag" data-t="soc">SOC · Blue Team</span>
+          <h3>Stack SOC complète sur homelab Proxmox</h3>
+          <p>Mon plus gros chantier. Une chaîne de détection complète sur trois nœuds Proxmox reliés par Tailscale (10.2.0.0/22), qui tourne en continu depuis des mois.</p>
+          <button class="acc__btn acc__btn--inline" aria-expanded="false" aria-controls="prj-1" data-cursor="Détails">
+            <span class="acc__label">En savoir plus</span>
+            <span class="acc__plus" aria-hidden="true"></span>
+          </button>
+          <div class="acc__panel" id="prj-1">
+            <ul><li>Wazuh all-in-one, agent sur le poste Windows 11 « WONDER », FIM ciblé</li><li>Suricata en mode IDS (AF-PACKET) avec les règles Emerging Threats</li><li>Graylog (MongoDB + Elasticsearch), logs eve.json acheminés par Filebeat</li><li>TheHive 5 + Cortex 3 en Docker : gestion de cas et enrichissement VirusTotal</li><li>Honeypot T-Pot (~35 conteneurs) sur Debian, supervision Prometheus / Grafana</li></ul>
+          </div>
+        </article>
+        <article class="project reveal" data-cat="reseau">
+          <span class="project__tag" data-t="reseau">Réseau</span>
+          <h3>VPN IPSec site-à-site (SAE)</h3>
+          <p>Interconnexion de deux sites, HQ et BRANCH, par un tunnel IPSec entre un routeur Cisco 7200 et un firewall ASA.</p>
+          <button class="acc__btn acc__btn--inline" aria-expanded="false" aria-controls="prj-2" data-cursor="Détails">
+            <span class="acc__label">En savoir plus</span>
+            <span class="acc__plus" aria-hidden="true"></span>
+          </button>
+          <div class="acc__panel" id="prj-2">
+            <ul><li>Négociation IKE phase 1 (ISAKMP) et phase 2 (IPSec SA) : AES, SHA, Diffie-Hellman</li><li>Configuration ISAKMP policy, transform-set, crypto map, ACL de chiffrement</li><li>Vérification par show crypto isakmp sa et debug crypto isakmp</li><li>Réalisé seul, puis utilisé comme référence par le groupe</li></ul>
+          </div>
+        </article>
+        <article class="project reveal" data-cat="reseau">
+          <span class="project__tag" data-t="reseau">Réseau</span>
+          <h3>Proxy Squid transparent sur pfSense</h3>
+          <p>Semaine de professionnalisation. J'étais chef d'équipe, ce qui voulait surtout dire : le faire, puis l'expliquer.</p>
+          <button class="acc__btn acc__btn--inline" aria-expanded="false" aria-controls="prj-3" data-cursor="Détails">
+            <span class="acc__label">En savoir plus</span>
+            <span class="acc__plus" aria-hidden="true"></span>
+          </button>
+          <div class="acc__panel" id="prj-3">
+            <ul><li>SSL Bumping via un certificat d'autorité personnalisé</li><li>ACLs Squid : filtrage par URL, domaine et catégorie</li><li>Intégration aux règles NAT de pfSense</li><li>Réalisé seul en 3 jours, puis transmis à 4 coéquipiers sur 2 semaines</li></ul>
+          </div>
+        </article>
+        <article class="project reveal" data-cat="soc">
+          <span class="project__tag" data-t="soc">SOC · Blue Team</span>
+          <h3>Purple Team Lab</h3>
+          <p>Kali attaque, Debian encaisse, Wazuh doit voir passer quelque chose. Si l'alerte ne tombe pas, la règle ne vaut rien.</p>
+          <button class="acc__btn acc__btn--inline" aria-expanded="false" aria-controls="prj-4" data-cursor="Détails">
+            <span class="acc__label">En savoir plus</span>
+            <span class="acc__plus" aria-hidden="true"></span>
+          </button>
+          <div class="acc__panel" id="prj-4">
+            <ul><li>Brute-force Hydra, reverse shell, mise en place de persistance</li><li>Détection confirmée côté défense par le FIM de Wazuh</li><li>Boucle attaque → alerte → ajustement de règle</li></ul>
+          </div>
+        </article>
+        <article class="project reveal" data-cat="reseau">
+          <span class="project__tag" data-t="reseau">Réseau</span>
+          <h3>SAE SI 401 — PNetLab, FortiGate &amp; Windows Server</h3>
+          <p>Projet pratique complet en environnement PNetLab, du firewall à l'annuaire.</p>
+          <button class="acc__btn acc__btn--inline" aria-expanded="false" aria-controls="prj-5" data-cursor="Détails">
+            <span class="acc__label">En savoir plus</span>
+            <span class="acc__plus" aria-hidden="true"></span>
+          </button>
+          <div class="acc__panel" id="prj-5">
+            <ul><li>FortiGate : VLANs et policies de firewall</li><li>Windows Server 2012 R2 : AD DS, DNS, DHCP</li><li>Audit réseau par Nmap et procédures de sauvegarde</li><li>Rapport structuré rédigé sous Word</li></ul>
+          </div>
+        </article>
+        <article class="project reveal" data-cat="offensif" id="offensif">
+          <span class="project__tag" data-t="offensif">Offensif</span>
+          <h3>Découverte du test d'intrusion (SAE)</h3>
+          <p>Introduction à la méthodologie de pentest sur environnements dédiés et machines TryHackMe.</p>
+          <button class="acc__btn acc__btn--inline" aria-expanded="false" aria-controls="prj-6" data-cursor="Détails">
+            <span class="acc__label">En savoir plus</span>
+            <span class="acc__plus" aria-hidden="true"></span>
+          </button>
+          <div class="acc__panel" id="prj-6">
+            <ul><li>Reconnaissance passive et active, scan Nmap</li><li>Exploitation via Metasploit Framework, sessions Meterpreter</li><li>Rédaction d'un rapport de pentest structuré</li></ul>
+          </div>
+        </article>
+        <article class="project reveal" data-cat="offensif">
+          <span class="project__tag" data-t="offensif">Offensif</span>
+          <h3>Metasploitable 2 &amp; OverTheWire Bandit</h3>
+          <p>Exploitation pratique et travail sur la stabilisation de shell.</p>
+          <button class="acc__btn acc__btn--inline" aria-expanded="false" aria-controls="prj-7" data-cursor="Détails">
+            <span class="acc__label">En savoir plus</span>
+            <span class="acc__plus" aria-hidden="true"></span>
+          </button>
+          <div class="acc__panel" id="prj-7">
+            <ul><li>Exploitation de la backdoor vsftpd</li><li>Élévation de privilèges, reverse shell Python, stabilisation du shell</li><li>Progression sur les niveaux OverTheWire Bandit</li></ul>
+          </div>
+        </article>
+        <article class="project reveal" data-cat="offensif">
+          <span class="project__tag" data-t="offensif">Offensif</span>
+          <h3>Audit WiFi — airgeddon</h3>
+          <p>Mise en place d'un banc d'audit WiFi sur Ubuntu 24.04, compilation comprise.</p>
+          <button class="acc__btn acc__btn--inline" aria-expanded="false" aria-controls="prj-8" data-cursor="Détails">
+            <span class="acc__label">En savoir plus</span>
+            <span class="acc__plus" aria-hidden="true"></span>
+          </button>
+          <div class="acc__panel" id="prj-8">
+            <ul><li>Compilation de hostapd-wpe et hostapd-mana</li><li>beef-xss installé via rbenv / Ruby</li><li>asleap compilé avec un shim libxcrypt personnalisé</li></ul>
+          </div>
+        </article>
+        <article class="project reveal" data-cat="offensif">
+          <span class="project__tag" data-t="offensif">Offensif</span>
+          <h3>Audit passif — esig.tg</h3>
+          <p>Audit de sécurité passif du site institutionnel de l'école, sans interaction intrusive, avec rapport DOCX structuré.</p>
+          <button class="acc__btn acc__btn--inline" aria-expanded="false" aria-controls="prj-9" data-cursor="Détails">
+            <span class="acc__label">En savoir plus</span>
+            <span class="acc__plus" aria-hidden="true"></span>
+          </button>
+          <div class="acc__panel" id="prj-9">
+            <ul><li>Divulgation d'informations et en-têtes HTTP de sécurité manquants</li><li>Exposition de l'installation WordPress</li><li>Recommandations classées par criticité</li></ul>
+          </div>
+        </article>
+        <article class="project reveal" data-cat="forensics">
+          <span class="project__tag" data-t="forensics">Forensique</span>
+          <h3>Analyse mémoire — Volatility</h3>
+          <p>Examen sur un dump mémoire Windows Server 2008 (Examen.mem), analysé avec Volatility 2 dans un conteneur Podman.</p>
+          <button class="acc__btn acc__btn--inline" aria-expanded="false" aria-controls="prj-10" data-cursor="Détails">
+            <span class="acc__label">En savoir plus</span>
+            <span class="acc__plus" aria-hidden="true"></span>
+          </button>
+          <div class="acc__panel" id="prj-10">
+            <ul><li>Listage des processus (pslist) et corrélation</li><li>Identification du processus suspect ftpbasicsvr.exe</li><li>Rédaction des sections d'un rapport forensique</li></ul>
+          </div>
+        </article>
+        <article class="project reveal" data-cat="systemes">
+          <span class="project__tag" data-t="systemes">Systèmes</span>
+          <h3>Labs Windows Server &amp; annuaire</h3>
+          <p>Construction et dépannage d'environnements d'entreprise, du contrôleur de domaine au déploiement d'images.</p>
+          <button class="acc__btn acc__btn--inline" aria-expanded="false" aria-controls="prj-11" data-cursor="Détails">
+            <span class="acc__label">En savoir plus</span>
+            <span class="acc__plus" aria-hidden="true"></span>
+          </button>
+          <div class="acc__panel" id="prj-11">
+            <ul><li>AD DS, DHCP, GPO, WDS, WSUS sur les domaines esig.local et lab.local</li><li>OpenLDAP + Samba sur Ubuntu 22.04 pour l'authentification centralisée</li><li>Dépannage réel : Windows Hello, boot USB sur ThinkPad (Secure Boot, mot de passe Supervisor)</li></ul>
+          </div>
+        </article>
+        <article class="project reveal" data-cat="reseau">
+          <span class="project__tag" data-t="reseau">Réseau</span>
+          <h3>SAE 3.01 TOGINET — Packet Tracer</h3>
+          <p>Architecture multi-sites simulée de bout en bout.</p>
+          <button class="acc__btn acc__btn--inline" aria-expanded="false" aria-controls="prj-12" data-cursor="Détails">
+            <span class="acc__label">En savoir plus</span>
+            <span class="acc__plus" aria-hidden="true"></span>
+          </button>
+          <div class="acc__panel" id="prj-12">
+            <ul><li>VLANs et routage inter-VLAN</li><li>RIPv2 et routes statiques</li><li>Services centralisés DHCP, DNS et HTTP</li></ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<section class="next">
+  <div class="wrap">
+    <a href="experience.html" data-cursor="Suivant">
+      <div>
+        <span class="next__label">Page suivante</span>
+        <div><span class="next__title">Expérience</span></div>
+      </div>
+      <span class="next__circle" aria-hidden="true">→</span>
+    </a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <p>© <span id="year">2026</span> TOTO Yao Wonder Japhet — Lomé, Togo</p>
+    <div class="site-footer__links">
+      <a href="https://www.linkedin.com/in/yao-wonder-japjet-toto-9a17a6335" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.credly.com/users/yao-wonder-japhet-toto" target="_blank" rel="noopener">Credly</a>
+      <a href="mailto:totowonder010@gmail.com">E-mail</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

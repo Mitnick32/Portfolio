@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>À propos — TOTO Yao Wonder Japhet</title>
+<meta name="description" content="Parcours, formation à l'ESIG Global Success et homelab Proxmox de TOTO Yao Wonder Japhet.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%231C2B2A'/><text x='16' y='21' font-family='monospace' font-size='13' font-weight='700' fill='%23F0F2ED' text-anchor='middle'>TY</text></svg>">
+<meta property="og:type" content="website">
+<meta property="og:title" content="À propos — TOTO Yao Wonder Japhet">
+<meta property="og:description" content="Parcours, formation à l'ESIG Global Success et homelab Proxmox de TOTO Yao Wonder Japhet.">
+<meta property="og:locale" content="fr_FR">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="progress" aria-hidden="true"></div>
+
+<div class="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"></span></div>
+
+<a class="float-avatar" data-cursor="Accueil" href="index.html" aria-label="Revenir à l'accueil">
+  <img src="assets/img/photo.png" alt="TOTO Yao Wonder Japhet" width="140" height="140">
+  <span class="float-avatar__tip" aria-hidden="true">Japhet</span>
+</a>
+<a class="skip" href="#main">Aller au contenu</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <nav class="nav" aria-label="Navigation principale">
+      <a class="brand" href="index.html">
+        <span class="brand__mark" aria-hidden="true">TY</span>
+        <span>TOTO Yao Wonder Japhet<span class="brand__sub">Réseaux &amp; Cybersécurité</span></span>
+      </a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu"><span></span></button>
+      <ul class="nav__links" id="menu">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="competences.html">Compétences</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="experience.html">Expérience</a></li>
+        <li><a href="contact.html">Me contacter</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="section-head reveal" style="max-width:74ch">
+        <p class="eyebrow">À propos</p>
+        <h1 style="margin:1rem 0 1.1rem; font-size:clamp(2.1rem,4.4vw,3.3rem)">Un étudiant, un homelab, et pas mal de choses cassées.</h1>
+        <p class="lead">J'ai 3 serveurs qui tournent chez moi. Ils me servent surtout à comprendre pourquoi les choses cassent.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <div class="grid grid--2" style="gap:44px; align-items:start">
+        <div class="reveal">
+          <h2 style="font-size:1.6rem; margin-bottom:1rem">Comment j'en suis arrivé là.</h2>
+          <p>Au départ je voulais juste comprendre comment deux machines se parlent. Les VLANs, le routage, les ACLs. Et puis une question m'a gêné : qui empêche quelqu'un d'écouter au milieu ?</p>
+          <p>Je suis maintenant en 2<sup>e</sup> année de licence pro Réseaux &amp; Cybersécurité à l'ESIG Global Success, à Lomé. Les cours donnent les bases : cryptologie, forensique, admin système, sécurité des réseaux. Le reste, je l'apprends chez moi.</p>
+          <p>« Chez moi », ça veut dire trois nœuds Proxmox reliés par Tailscale, un poste Windows 11 surveillé par un agent Wazuh, un honeypot T-Pot qui se fait taper dessus toute la journée, et une chaîne Suricata → Graylog → TheHive pour trier ce qui remonte. Quand ça tombe, il n'y a personne d'autre pour le relever.</p>
+          <p>Ce que je cherche : un stage ou une alternance à Lomé, en IT ou en réseaux. Voir tout ça sur une infrastructure qui n'est pas la mienne.</p>
+        </div>
+
+        <div class="reveal" style="--d:120ms">
+          <div class="card" style="margin-bottom:20px">
+            <p class="eyebrow">Repères</p>
+            <div class="meter" style="margin-top:22px">
+              <div class="meter__row">
+                <p class="meter__label"><b>Formation</b><span>ESIG Global Success</span></p>
+                <p style="font-size:.92rem">Licence professionnelle Réseaux &amp; Cybersécurité — 2<sup>e</sup> année, Lomé (Togo).</p>
+              </div>
+              <div class="meter__row">
+                <p class="meter__label"><b>Recherche</b><span>2026</span></p>
+                <p style="font-size:.92rem">Stage ou alternance en IT / réseaux, à Lomé.</p>
+              </div>
+              <div class="meter__row" style="margin-bottom:0">
+                <p class="meter__label"><b>Homelab</b><span>Proxmox · Tailscale</span></p>
+                <p style="font-size:.92rem">3 nœuds, réseau maillé 10.2.0.0/22, une stack SOC complète en production permanente.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <p class="eyebrow">Hors des écrans</p>
+            <ul class="chips" style="margin-top:20px">
+              <li class="chip">Basketball</li>
+              <li class="chip">Taekwondo (débutant)</li>
+              <li class="chip">Génie en Herbe</li>
+              <li class="chip">Anime</li>
+              <li class="chip">Génération d'images IA</li>
+            </ul>
+            <p style="margin-top:20px; font-size:.9rem; color:var(--muted)">Le Génie en Herbe m'a appris à répondre vite avec la moitié des indices. Ça sert plus souvent qu'on ne croit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Modules suivis</p>
+        <h2>Ce que la formation m'a donné.</h2>
+      </div>
+      <div class="grid grid--3">
+        <div class="card reveal">
+          <span class="card__num">Sécurité</span>
+          <h3>Cryptologie &amp; défense</h3>
+          <p>Cryptologie et mise en œuvre, prise d'empreintes, sécurité des réseaux LAN, sécurisation des services réseaux, sécurisation d'un système d'information.</p>
+        </div>
+        <div class="card reveal" style="--d:90ms">
+          <span class="card__num">Investigation</span>
+          <h3>Forensique &amp; social</h3>
+          <p>Analyse post-incident, ingénierie sociale, circuits numériques (logique combinatoire et séquentielle, algèbre de Boole, Karnaugh).</p>
+        </div>
+        <div class="card reveal" style="--d:180ms">
+          <span class="card__num">Fondations</span>
+          <h3>Systèmes &amp; calcul</h3>
+          <p>Administration Windows et Linux, algorithmique et structures de données, recherche opérationnelle, analyse numérique, bases de données (MERISE, UML, SQL).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<section class="next">
+  <div class="wrap">
+    <a href="competences.html" data-cursor="Suivant">
+      <div>
+        <span class="next__label">Page suivante</span>
+        <div><span class="next__title">Compétences</span></div>
+      </div>
+      <span class="next__circle" aria-hidden="true">→</span>
+    </a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <p>© <span id="year">2026</span> TOTO Yao Wonder Japhet — Lomé, Togo</p>
+    <div class="site-footer__links">
+      <a href="https://www.linkedin.com/in/yao-wonder-japjet-toto-9a17a6335" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.credly.com/users/yao-wonder-japhet-toto" target="_blank" rel="noopener">Credly</a>
+      <a href="mailto:totowonder010@gmail.com">E-mail</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
